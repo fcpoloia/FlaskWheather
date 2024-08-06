@@ -1,0 +1,31 @@
+{% extends 'base.html' %} {% block head %}<title>{{ loc }}</title>{% endblock %}
+{% block body %}
+<div class="desc center">{{ desc }}</div>
+<div class="center">
+    <table class="center">
+        <tr>
+            <th>DATE</th>
+            <th>AVG. TEMP</th>
+            <th>HUMIDITY</th>
+            <th>PRECIP PROB</th>
+            <th>WIND DIRECTION</th>
+            <th>WIND SPEED</th>
+        </tr>
+        {% for i in range(0,days_ammount) %}
+        <tr>
+            <td>{{ days[i]["datetime"] }}</td>
+            <td>{{ days[i]["temp"] }}°C</td>
+            <td>{{ days[i]["humidity"] }}%</td>
+            <td>
+                {{ days[i]["precipprob"] }}% {% if days[i]["preciptype"] is not
+                none %}of {{days[i]["preciptype"][0]}}{% endif %}
+            </td>
+            <td>{{ tD(days[i]["winddir"]) }}</td>
+            <td>{{ days[i]["windspeed"] }}km/h</td>
+        </tr>
+
+        {% endfor %}
+    </table>
+</div>
+
+{% endblock %}

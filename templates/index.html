@@ -1,0 +1,9 @@
+{% extends 'base.html' %} {% block head %}
+<title>Flather</title>
+{% endblock %} {% block body %}
+
+<form action="/" method="POST">
+    <input type="text" name="location" id="location" />
+    <input type="submit" value="Fetch" />
+</form>
+{% endblock %}

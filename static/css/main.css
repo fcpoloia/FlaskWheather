@@ -1,0 +1,26 @@
+body {
+    background-color: rgb(30, 30, 30);
+    color: white;
+}
+
+table {
+    width: 100%;
+}
+
+.center {
+    justify-self: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.desc {
+    border-radius: 10px;
+    background: rgb(55, 0, 128);
+    margin: 1%;
+    padding: 1%;
+    font-size: 20px;
+}
+td,
+th {
+    border: 1px solid white;
+}
